@@ -74,11 +74,10 @@
                     }
                 });
                 var current = 0;
-                $("#donuts").on("swiperight" function() {
+                $("#donuts").click(function() {
                     $("#answers").html("<div><h1>" + donutShops[current].name + "</h1><img src='" + donutShops[current].pic + "'></div>");
                     current++;
                     current %= donutShops.length;
-                    console.log("Swiping right");
                 });
                 $("#donuts").on("swipeleft" function() {
                     $("#answers").html("<div><h1>" + donutShops[current].name + "</h1><img src='" + donutShops[current].pic + "'></div>");
