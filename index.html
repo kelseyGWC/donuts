@@ -90,7 +90,7 @@
                         $("#pic").attr("src", donutShops[current].pic);
                     }
                 });
-                $("#donuts").delegate("img", "click", function() {
+                $("#donuts").delegate("img", "swiperight", function() {
                     current = (current + 1) % donutShops.length;
                     $("#name").text(donutShops[current].name);
                     $("#pic").attr("src", donutShops[current].pic);
