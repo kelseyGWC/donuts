@@ -91,13 +91,13 @@
                 });
                 $("#pic").on("swiperight", function() {
                     current = (current + 1) % donutShops.length;
-                    //$("#name").html(donutShops[current].name);
-                    $(this).attr("src", donutShops[current]);
+                    $("#name").text(donutShops[current].name);
+                    $(this).attr("src", donutShops[current].pic);
                 });
                 $("#pic").on("swipeleft", function() {
                     current = ((current - 1) + donutShops.length) % donutShops.length;
-                    //$("#name").html(donutShops[current].name);
-                    $(this).attr("src", donutShops[current]);
+                    $("#name").text(donutShops[current].name);
+                    $(this).attr("src", donutShops[current].pic);
                 });
             });
         </script>
