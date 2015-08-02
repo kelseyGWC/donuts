@@ -86,19 +86,19 @@
                             donutShops.push(new DonutShop(data.businesses[i].name, data.businesses[i].image_url));
                         }
                         console.log(donutShops);
-                        $('h1').text(donutShops[current].name);
-                        $('img').attr("src", donutShops[current].pic);
+                        $("#name").text(donutShops[current].name);
+                        $("#pic").attr("src", donutShops[current].pic);
                     }
                 });
                 $("#donuts").delegate("img", "click", function() {
                     current = (current + 1) % donutShops.length;
-                    $("h1").text(donutShops[current].name);
-                    $("img").attr("src", donutShops[current].pic);
+                    $("#name").text(donutShops[current].name);
+                    $("#pic").attr("src", donutShops[current].pic);
                 });
                 $("#donuts").delegate("img", "swipeleft", function() {
                     current = ((current - 1) + donutShops.length) % donutShops.length;
-                    $("h1").text(donutShops[current].name);
-                    $("img").attr("src", donutShops[current].pic);
+                    $("#name").text(donutShops[current].name);
+                    $("#pic").attr("src", donutShops[current].pic);
                 });
             });
         </script>
