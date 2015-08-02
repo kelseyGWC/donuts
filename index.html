@@ -73,7 +73,7 @@
 
             $(document).ready(function() {
                 var donutShops = [];
-                var current = 1;
+                var current = 0;
                 $.ajax({
                     'url' : message.action,
                     'data' : parameterMap,
@@ -89,23 +89,16 @@
                         $('#pic').attr("src", donutShops[current].pic);
                     }
                 });
-                $("#pic").on("swipeleft", function() {
-                    current--;
-                    current %= donutShops.length;
-                    current += donutShops.length;
-                    current %= donutShops.length;
-                    console.log("current: " + current);
-                    $('#name').html(donutShops[current].name);
-                    $(this).attr("src", donutShops[current].pic);
-                });
                 $("#pic").on("swiperight", function() {
-                    current++;
-                    current %= donutShops.length;
-                    console.log("current: " + current);
-                    $('#name').html(donutShops[current].name);
-                    $(this).attr("src", donutShops[current].pic);
+                    current = (current + 1) % donutShops.length;
+                    $("#name").html(donutShops[current].name);
+                    $(this).attr("src", donutShops[current]);
                 });
-
+                $("#pic").on("swipeleft", function() {
+                    current = ((current - 1) + donutShops.length) % donutShops.length;
+                    $("#name").html(donutShops[current].name);
+                    $(this).attr("src", donutShops[current]);
+                });
             });
         </script>
     </body>
