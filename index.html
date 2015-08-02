@@ -86,8 +86,8 @@
                             donutShops.push(new DonutShop(data.businesses[i].name, data.businesses[i].image_url));
                         }
                         console.log(donutShops);
-                        $('#name').text(donutShops[current].name);
-                        $('#pic').attr("src", donutShops[current].pic);
+                        $('h1').text(donutShops[current].name);
+                        $('img').attr("src", donutShops[current].pic);
                     }
                 });
                 $("#donuts").delegate("img", "click", function() {
