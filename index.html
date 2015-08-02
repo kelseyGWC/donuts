@@ -11,7 +11,7 @@
         <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
         <style>
             #pic {
-                width: 80%;
+                width: 100%;
             }
         </style>
     </head>
@@ -86,7 +86,7 @@
                         $('#pic').attr("src", donutShops[current].pic);
                     }
                 });
-                $("#donuts").on("swipeleft", function() {
+                $("#pic").on("swipeleft", function() {
                     current--;
                     current %= donutShops.length;
                     current += donutShops.length;
@@ -95,7 +95,7 @@
                     $('#name').text(donutShops[current].name);
                     $('#pic').attr("src", donutShops[current].pic);
                 });
-                $("#donuts").on("swiperight", function() {
+                $("#pic").on("swiperight", function() {
                     current++;
                     current %= donutShops.length;
                     console.log("current: " + current);
