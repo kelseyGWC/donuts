@@ -95,15 +95,15 @@
                     current += donutShops.length;
                     current %= donutShops.length;
                     console.log("current: " + current);
-                    $('#name').text(donutShops[current].name);
-                    $('#pic').attr("src", donutShops[current].pic);
+                    $('#name').html(donutShops[current].name);
+                    $(this).attr("src", donutShops[current].pic);
                 });
                 $("#pic").on("swiperight", function() {
                     current++;
                     current %= donutShops.length;
                     console.log("current: " + current);
-                    $('#name').text(donutShops[current].name);
-                    $('#pic').attr("src", donutShops[current].pic);
+                    $('#name').html(donutShops[current].name);
+                    $(this).attr("src", donutShops[current].pic);
                 });
 
             });
