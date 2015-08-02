@@ -88,12 +88,12 @@
                         $('#pic').attr("src", donutShops[current].pic);
                     }
                 });
-                jQuery("#pic").delegate("swiperight", function() {
+                $("#pic").delegate("swiperight", function() {
                     current = (current + 1) % donutShops.length;
                     $("#name").text(donutShops[current].name);
                     $(this).attr("src", donutShops[current].pic);
                 });
-                jQuery("#pic").delegate("swipeleft", function() {
+                $("#pic").delegate("swipeleft", function() {
                     current = ((current - 1) + donutShops.length) % donutShops.length;
                     $("#name").text(donutShops[current].name);
                     $(this).attr("src", donutShops[current].pic);
