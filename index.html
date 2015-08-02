@@ -78,11 +78,13 @@
                     $("#answers").html("<div><h1>" + donutShops[current].name + "</h1><img src='" + donutShops[current].pic + "'></div>");
                     current++;
                     current %= donutShops.length;
+                    console.log("Swiping right");
                 });
                 $("#donuts").on("swipeleft" function() {
                     $("#answers").html("<div><h1>" + donutShops[current].name + "</h1><img src='" + donutShops[current].pic + "'></div>");
                     current--;
                     current %= donutShops.length;
+                    console.log("Swiping left");
                 });
             });
 
@@ -100,7 +102,7 @@
     </head>
     <body>
         <h1>Donuts in Seattle!</h1>
-        <div id='donuts'>Click to find donuts!</div>
+        <div id='donuts'>Swipe to find donuts!</div>
         <div id='answers'></div>
         <img src="https://s3-media3.fl.yelpcdn.com/assets/srv0/developer_pages/65526d1a519b/assets/img/Powered_By_Yelp_Red.png">
     </body>
