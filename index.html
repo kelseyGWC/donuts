@@ -90,12 +90,12 @@
                         $("#pic").attr("src", donutShops[current].pic);
                     }
                 });
-                $("#donuts").delegate("img", "swiperight", function() {
+                $("#donuts").delegate("img", "swiperight", function(event) {
                     current = (current + 1) % donutShops.length;
                     $("#name").text(donutShops[current].name);
                     $("#pic").attr("src", donutShops[current].pic);
                 });
-                $("#donuts").delegate("img", "swipeleft", function() {
+                $("#donuts").delegate("img", "swipeleft", function(event) {
                     current = ((current - 1) + donutShops.length) % donutShops.length;
                     $("#name").text(donutShops[current].name);
                     $("#pic").attr("src", donutShops[current].pic);
