@@ -91,7 +91,7 @@
                     $("#name").text(donutShops[current].name);
                     $("#pic").attr("src", donutShops[current].pic);
                 });
-                $("#pic").on(swipeleft", function() {
+                $("#pic").on("swipeleft", function() {
                     current = ((current - 1) + donutShops.length) % donutShops.length;
                     $("#name").text(donutShops[current].name);
                     $("#pic").attr("src", donutShops[current].pic);
