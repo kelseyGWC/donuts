@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Donuts in Seattle</title>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
         <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
         <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
@@ -88,12 +88,12 @@
                         $('#pic').attr("src", donutShops[current].pic);
                     }
                 });
-                jQuery("#pic").on("swiperight", function() {
+                $("#pic").on("swiperight", function() {
                     current = (current + 1) % donutShops.length;
                     $("#name").text(donutShops[current].name);
                     $(this).attr("src", donutShops[current].pic);
                 });
-                jQuery("#pic").on("swipeleft", function() {
+                $("#pic").on("swipeleft", function() {
                     current = ((current - 1) + donutShops.length) % donutShops.length;
                     $("#name").text(donutShops[current].name);
                     $(this).attr("src", donutShops[current].pic);
