@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>swipe demo</title>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <style>
+    #pic {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<img id="pic" src="http://jeffstern.co/playground/pixarSort/images/brave.jpg">
+ 
+<script>
+var myImages = ["http://jeffstern.co/playground/pixarSort/images/brave.jpg", "http://jeffstern.co/playground/pixarSort/images/bugslife.jpg", "http://jeffstern.co/playground/pixarSort/images/cars.jpg", "http://jeffstern.co/playground/pixarSort/images/cars2.jpg", "http://jeffstern.co/playground/pixarSort/images/findingnemo.jpg", "http://jeffstern.co/playground/pixarSort/images/incredibles.jpg", "http://jeffstern.co/playground/pixarSort/images/monstersinc.jpg", "http://jeffstern.co/playground/pixarSort/images/monstersuniversity.jpg", "http://jeffstern.co/playground/pixarSort/images/ratatouille.jpg", "http://jeffstern.co/playground/pixarSort/images/toystory.jpg", "http://jeffstern.co/playground/pixarSort/images/toystory2.jpg", "http://jeffstern.co/playground/pixarSort/images/toystory3.jpg", "http://jeffstern.co/playground/pixarSort/images/up.jpg", "http://jeffstern.co/playground/pixarSort/images/walle.jpg"];
+var currentPic = 0;
+$(document).ready(function() {
+  $( "#pic" ).on("swiperight", function() {
+    currentPic = (currentPic + 1) % myImages.length;
+    $(this).attr("src", myImages[currentPic]);
+  });
+  $( "#pic" ).on("swipeleft", function() {
+    currentPic = ((currentPic - 1) + myImages.length) % myImages.length;
+    $(this).attr("src", myImages[currentPic]);
+  });
+});
+ 
+</script>
+ 
+</body>
+</html>
